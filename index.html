@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gadidamalla Thangella - DevOps Engineer</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --secondary-color: #333;
+      --font-family: Arial, sans-serif;
+      --spacing: 20px;
+    }
+
+    body {
+      font-family: var(--font-family);
+      color: var(--secondary-color);
+      background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 0 var(--spacing);
+    }    
+
+* {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+     background: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+      color: #333;
+    }
+
+    .container {
+
+      width: 80%;
+      margin: auto;
+    }
+
+     .header-title {
+      display: inline-block;
+ background-color:#90AFC5;
+text-shadow: 5px 7px 7px rgba(10, 10, 10, 0.6);
+color: #0a0a0a;
+      overflow: hidden;
+      border-right: .15em solid orange; /* Change border color as needed */
+      white-space: nowrap;
+      margin: 0;
+      letter-spacing: .15em; /* Adjust letter spacing */
+      animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+    }
+
+    /* The typing effect animation */
+    @keyframes typing {
+      from {
+        width: 0;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    /* The blinking cursor animation */
+    @keyframes blink-caret {
+      from, to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: orange; /* Change cursor color */
+      }
+    }
+
+    /* CSS styles here */
+    nav {
+      text-align: center;
+      background-color: #90AFC5;
+      padding: 10px 0;
+    }
+
+    nav ul {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      transition: transform 0.3s ease;
+    }
+
+    nav ul li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+text-shadow: 5px 7px 7px rgba(10, 10, 10, 0.6);
+color: #0a0a0a;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: lightblue;
+    }
+
+    @keyframes slideIn {
+      from {
+        transform: translateY(-100%);
+      }
+      to {
+        transform: translateY(0);
+      }
+    }
+
+    nav.open ul {
+      animation: slideIn 0.5s ease;
+    }
+
+
+ .footer-icons a {
+      color: #fff;
+      text-decoration: none;
+      margin-right: 10px;
+      font-size: 24px;
+    }
+
+    .section {
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 10px;
+     box-shadow: 31px 26px 19px rgba(6, 5, 5, 0.5);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #333;
+
+    }
+
+    .card p {
+      color: #666;
+    }
+
+    .skill-icon {
+      font-size: 40px;
+      margin-bottom: 10px;
+      color: #333;
+      transition: transform 0.3s ease;
+    }
+
+    .skill-icon:hover {
+      transform: scale(1.2);
+    }
+
+    footer {
+      background: linear-gradient(109.6deg, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer p {
+      margin: 5px 0;
+    }
+
+    .footer-icons a {
+      color:  #31473A;
+      text-decoration: none;
+      margin-right: 20px;
+      font-size: 30px;
+    }
+
+    .footer-icons a:hover {
+      color: lightblue;
+    }
+
+    .contact-form {
+      margin-top: 20px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .contact-form input[type="submit"] {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .contact-form input[type="submit"]:hover {
+      background-color: #555;
+    }
+
+    /* Animation */
+    @keyframes slideInFromLeft {
+      0% {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .animated {
+      animation: slideInFromLeft 1s ease-in-out;
+
+.github-projects {
+      margin-top: 20px;
+    }
+
+    .github-projects h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .github-projects .project-card {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .github-projects .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .github-projects ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .github-projects ul li {
+      margin-bottom: 10px;
+    }
+
+    .github-projects ul li a {
+      color: #333;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .github-projects ul li a:hover {
+      color: lightblue;
+    }
+    
+.profile-info {
+    display: flex;
+    align-items: center; /* Vertically center items */
+}
+
+.profile-photo {
+    width: 250px; /* Adjust the size of the profile photo */
+    height: auto;
+    margin-right: 20px; /* Adjust the margin between the photo and the info */
+}
+
+.info {
+    flex-grow: 1; /* Allow the info section to expand and fill the remaining space */
+}
+
+.resume-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.resume-button:hover {
+    background-color: #0056b3;
+}
+
+
+  </style>
+</head>
+<body>
+  </head>
+<body>
+   <header>
+    <div class="container">
+      <h1><span class="header-title">Gadidamalla Thangella - DevOps Engineer</span></h1>
+      <nav>
+        <ul class="navbar-icons">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="container">
+    <h2>Connect</h2>
+    <p><i class="fas fa-envelope"></i> Email: imgtk17@gmail.com | <i class="fas fa-phone"></i> Phone: 8008133117</p>
+    <div class="footer-icons">
+        <a href="https://www.instagram.com/g_thangella_k?utm_source=qr&igsh=aWczdnVtaDR1N280"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/GUfLXH1Ys147Lt1t/?mibextid=qi2Omg"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/gthangella?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/GTK-THANGELLA-17"><i class="fab fa-github"></i></a>
+    </div>
+</div>
+
+
+
+  <section id="about" class="section animated">
+    <div class="container">
+        <h2>About Me</h2>
+        <div class="card">
+            <div class="profile-info">
+                <img src=".\Assests\images\BG1.png" alt="Profile Photo" class="profile-photo">
+                <div class="info">
+                    <p><strong>Professional Summary:</strong><br>
+                        Driven and adaptable BSc Computer Science And Gaming Development student with a keen interest in DevOps practices. Proficient in AWS, Linux, Git, Jenkins, Docker, Ansible, and CI/CD. Skilled in AI-powered code generation, leveraging emerging technologies to streamline development processes. Possesses basic knowledge in programming languages including C, C++, C#, Java, HTML, CSS, and JavaScript. Committed to leveraging emerging technologies and best practices to drive efficiency in a collaborative DevOps environment.</p>
+
+<!-- Resume download button -->
+                    <a href=".\Assests\pdf\Gadidamalla Thangella-Resume-Devops.pdf" download class="resume-button">Download Resume</a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+  
+ <section id="skills" class="section animated">
+    <div class="container">
+        <h2>Skills</h2>
+        <div class="card">
+            <ul>
+                <li><i class="fab fa-aws skill-icon"></i> AWS</li>
+                <li><i class="fab fa-linux skill-icon"></i> Linux</li>
+                <li><i class="fab fa-git skill-icon"></i> Git / GitHub</li>
+                <li><i class="fab fa-jenkins skill-icon"></i> Jenkins</li>
+                <li><i class="fas fa-terminal skill-icon"></i> Shell Scripting (Bash)</li>
+                <li><i class="fab fa-docker skill-icon"></i> Docker</li>
+                <li><i class="fab fa-ansible skill-icon"></i> Ansible</li>
+                <li><i class="fas fa-sync-alt skill-icon"></i> Continuous Integration / Continuous Deployment (CI/CD)</li>
+                <li><i class="fas fa-database skill-icon"></i> Apache Tomcat</li>
+                <li><i class="fas fa-database skill-icon"></i> Nexus</li>
+                <li><i class="fab fa-terraform skill-icon"></i> Terraform</li>
+                <li><i class="fab fa-kubernetes skill-icon"></i> Kubernetes</li>
+                <li><i class="fas fa-chart-line skill-icon"></i> Prometheus</li>
+                <li><i class="fas fa-chart-bar skill-icon"></i> Grafana</li>
+                <li><i class="fas fa-code-branch skill-icon"></i> Argo CD</li>
+                <li><i class="fas fa-code skill-icon"></i> AI-powered Code Generator</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section id="experience" class="section">
+    <div class="container">
+      <h2>Experience</h2>
+<div class="card">
+      <div class="experience-card">
+        <p>As a fresher, I've taken the initiative to work on personal projects that demonstrate my skills and passion for DevOps practices. These projects, including automated CI/CD pipelines and infrastructure orchestration using tools like Jenkins and Ansible, showcase my ability to learn and apply new technologies effectively.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects" class="section animated">
+    <div class="container">
+      <h2>Projects</h2>
+<div class="card">
+      <div class="card">
+       <p><strong>Automated CI/CD Pipeline:</strong> Implemented Jenkins-based pipeline for web app automation.</p>
+        <p><strong>Infrastructure Orchestration:</strong> Utilized Ansible for IaC deployment ensuring consistency.</p>
+      </div>
+    </div>
+  </section>
+
+
+<section id="creativity" class="section animated">
+    <div class="container">
+      <h2>Creativity and Proficiency</h2>
+      <div class="card">
+        <p><strong>AI-Powered Code Generator
+:</strong><br>
+       AI-Powered Code Generation: Skilled in generating code using ChatGPT for various applications, including webpages and web applications. Successfully developed over 12 unique webpages from original concepts, demonstrating creativity and proficiency in serverless and backendless development.
+        <p><strong>Programming Languages:</strong><br>
+        While my main focus is on transitioning into a DevOps role, I also have basic proficiency in programming languages such as C, C++, C#, Java, HTML, CSS, and JavaScript. This broad skill set allows me to understand and modify code effectively.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <div class="container">
+    <div class="prompt-projects">
+      <h2>Prompt Engineering Projects</h2>
+      <div class="project-card">
+        <ul>
+          <li><a href="https://gtk-thangella-17.github.io/Lifespan_calculatoe-v1/"><i class="fab fa-github"></i> Lifespan Calculator</a></li>
+        <li><a href="https://gtk-thangella-17.github.io/Book-your-Appointment/"><i class="fab fa-github"></i> Book Your Appointment</a></li>
+        <li><a href="https://gtk-thangella-17.github.io/code-merger-and-divider-v1/"><i class="fab fa-github"></i> Code Merger and Divider</a></li>
+        <li><a href="https://gtk-thangella-17.github.io/deals-and-tech-news-content-code-generator-v1/"><i class="fab fa-github"></i> Deals and Tech News Content Code Generator</a></li>
+        <li><a href="https://gtk-thangella-17.github.io/Submit-Your-Theater-Details-v2/"><i class="fab fa-github"></i> Submit Your Theater Details</a></li>
+        <li><a href="https://gtk-thangella-17.github.io/GTK-THANGELLA-17-Book-Theater-Website-v1/"><i class="fab fa-github"></i> GTK-THANGELLA-17 Book Theater Website</a></li>
+        <li><a href="https://gtk-thangella-17.github.io/code-generator-v1/"><i class="fab fa-github"></i> Code Generator</a></li>
+<li><a href="https://gtk-thangella-17.github.io/GTK-AI-serverless-backendless/"><i class="fab fa-github"></i> GTK-AI-serverless-backendless</a></li>
+
+<li><a href="https://gtk-thangella-17.github.io/Renewit-Post-A-Product-webpage/"><i class="fab fa-github"></i> Renewit-Post-A-Product-webpage</a></li>
+
+
+<li><a href="https://gtk-thangella-17.github.io/Renewit-products-webpage/"><i class="fab fa-github"></i>Renewit-products-webpage</a></li>
+<li><a href="https://gtk-thangella-17.github.io/My-Company-webpage/"><i class="fab fa-github"></i> My-Company-webpage</a></li>
+<li><a href="https://gtk-thangella-17.github.io/Birthday-Wishes-Webpage/"><i class="fab fa-github"></i>Wishes-Generator-Webpage</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<section id="education" class="section animated">
+    <div class="container">
+        <h2>Education</h2>
+        <div class="card">
+            <ul>
+                <li><i class="fas fa-graduation-cap"></i> BSc (Honours) Computer Science And Gaming Development, BackstagePass Institute Of Gaming And Technology (2020 - Present)</li>
+                <li><i class="fas fa-graduation-cap"></i> Intermediate (MPC), Sri Gayatri Junior College, Telangana State (2019)</li>
+                <li><i class="fas fa-graduation-cap"></i> SSC, Lotus Lap Public School, Telangana State (2017)</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+  
+<section id="about" class="section animated">
+    <div class="container">
+        <h2>My Contact Info</h2>
+        <div class="card">
+            <p><strong><i class="fas fa-map-marker-alt"></i> Location:</strong> Hyderabad, Telangana, INDIA</p>
+            <p><strong><i class="fas fa-phone"></i> Phone:</strong> 8008133117</p>
+            <p><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:imgtk17@gmail.com">imgtk17@gmail.com</a></p>
+            <p><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> <a href="https://www.linkedin.com/in/gthangella">linkedin.com/in/gthangella</a></p>
+            <p><strong><i class="fab fa-github"></i> GitHub:</strong> <a href="https://github.com/GTK-THANGELLA-17">github.com/GTK-THANGELLA-17</a></p>
+        </div>
+    </div>
+</section>
+
+
+  <section id="contact" class="section">
+    <div class="container">
+        <h2>Contact Me</h2>
+        <div class="card">
+            <form class="contact-form" method="post" action="mailto:imgtk17@gmail.com" enctype="text/plain">
+                <div class="input-group">
+                    <label for="name"><i class="fas fa-user"></i></label>
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <label for="email"><i class="fas fa-envelope"></i></label>
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="input-group">
+                    <label for="message"><i class="fas fa-comment"></i></label>
+                    <textarea id="message" name="message" placeholder="Your Message" rows="4" required></textarea>
+                </div>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+    </div>
+</section>
+
+
+  <footer>
+    <div class="container">
+      <h2>Connect</h2>
+      <p>Email: imgtk17@gmail.com | Phone: 8008133117</p>
+      <div class="footer-icons">
+        <a href="https://www.instagram.com/g_thangella_k?utm_source=qr&igsh=aWczdnVtaDR1N280"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/share/GUfLXH1Ys147Lt1t/?mibextid=qi2Omg"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/in/gthangella?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin"></i></a>
+
+        <a href="https://github.com/GTK-THANGELLA-17"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </footer>
+
+ <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector('.contact-form');
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission behavior
+      
+      const name = form.querySelector('input[name="name"]').value;
+      const email = form.querySelector('input[name="email"]').value;
+      const message = form.querySelector('textarea[name="message"]').value;
+      
+      // Simple validation, just checking if fields are not empty
+      if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+        alert('Please fill in all fields.');
+      } else {
+        // Construct mailto URL with pre-filled details
+        const mailtoURL = `mailto:imgtk17@gmail.com?subject=Message from ${name}&body=${encodeURIComponent(message)}`;
+        
+        // Open user's email client with pre-filled details
+        window.location.href = mailtoURL;
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
