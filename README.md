@@ -1,56 +1,120 @@
 # Gadidamalla Thangella - DevOps Engineer
 
-Welcome to my GitHub profile! I'm Gadidamalla Thangella, a DevOps Engineer passionate about leveraging technology to streamline development processes and drive efficiency.
+## Table of Contents
+- [About](#about)
+- [Skills](#skills)
+- [Projects](#projects)
+- [Experience](#experience)
+- [Education](#education)
+- [Contact](#contact)
 
-## About Me
+## About
+![Profile Photo](./Assests/images/BG1.png)
+- **Professional Summary:**
+  Driven and adaptable BSc Computer Science And Gaming Development student with a keen interest in DevOps practices. Proficient in AWS, Linux, Git, Jenkins, Docker, Ansible, and CI/CD. Skilled in AI-powered code generation, leveraging emerging technologies to streamline development processes. Possesses basic knowledge in programming languages including C, C++, C#, Java, HTML, CSS, and JavaScript. Committed to leveraging emerging technologies and best practices to drive efficiency in a collaborative DevOps environment.
 
-I am a driven and adaptable BSc Computer Science And Gaming Development student with a keen interest in DevOps practices. My skill set includes AWS, Linux, Git, Jenkins, Docker, Ansible, and CI/CD. I am committed to learning and applying emerging technologies to enhance collaborative DevOps environments.
+[Download Resume](./Assests/pdf/Gadidamalla Thangella-Resume-Devops.pdf)
 
-## Connect
+## Skills
+### DevOps & Infrastructure
+- Git
+- Jenkins
+- Maven
+- Ansible
+- Docker
+- Kubernetes
+- Terraform
+- Linux & Windows
+- Kops
+- Argo CD
+- Nexus
 
-- Email: imgtk17@gmail.com
-- Phone: 8008133117
-- [LinkedIn](https://www.linkedin.com/in/gthangella)
-- [GitHub](https://github.com/GTK-THANGELLA-17)
+### Cloud & Web Technologies
+- AWS
+- Apache Tomcat
+
+### Monitoring & Analytics
+- Prometheus & Grafana
+
+### AI & Development
+- AI-powered Code Generator
+
+### Game Development & Design
+- Unity
+- Unreal Engine
+
+### Graphics & Design
+- Photoshop
+- Autodesk Maya
+- Blender
+
+### Video Editing
+- Premier Pro
+
+### Programming Languages & Web Development
+- C
+- C++
+- Java
+- Python
+- C#
+- HTML
+- CSS
+- JavaScript
+
+## Experience
+As a fresher, I've gained experience in DevOps practices, specializing in automated CI/CD pipelines. I've worked with tools like Git, Maven, Jenkins, Terraform, AWS, and Nexus to streamline deployment processes. This includes setting up Jenkins nodes, configuring infrastructure with Terraform on AWS, and deploying web applications on Tomcat servers. I've also managed artifact uploads to Nexus for version control and utilized Prometheus and Grafana for server monitoring. My academic background in Computer Science complements my practical skills in DevOps.
 
 ## Projects
+### Automated CI/CD Pipeline
+Deployed reference source code to Tomcat web application server using various tools including Git, Maven, Jenkins, Terraform, AWS, and Nexus.
+#### Tools:
+- Version Control System: Git, GitHub
+- Build tool: Maven
+- Integration tool: Jenkins
+- Application server: Tomcat
+- Infrastructure as a code: Terraform
+- Cloud Environment: AWS
+- Artifactory: Nexus
+#### Summary:
+- Created Infrastructure using Terraform via Jenkins Pipeline.
+- Setup Jenkins master and slave with Ansible integration for build and deployment.
+- Configured Tomcat web application server on the Slave server for deployment.
+- Integrated reference source code with Jenkins.
+- Utilized Maven as the build tool to generate the WAR file for deployment.
+- Uploaded artifacts to Nexus for version availability maintenance.
+- Deployed the web application on Tomcat using Pipeline.
+- Monitored the App server with Prometheus & Grafana.
 
-- **Automated CI/CD Pipeline:** Implemented Jenkins-based pipeline for web app automation.
-- **Infrastructure Orchestration:** Utilized Ansible for IaC deployment ensuring consistency.
+## Creativity and Proficiency
+- **AI-Powered Code Generator:**
+  Skilled in generating code using ChatGPT for various applications, including webpages and web applications. Successfully developed over 12 unique webpages from original concepts, demonstrating creativity and proficiency in serverless and backendless development.
+- **Programming Languages:**
+  While my main focus is on transitioning into a DevOps role, I also have basic proficiency in programming languages such as C, C++, C#, Java, HTML, CSS, and JavaScript. This broad skill set allows me to understand and modify code effectively.
+
+## Prompt Engineering Projects
+- [Lifespan Calculator](https://gtk-thangella-17.github.io/Lifespan_calculatoe-v1/)
+- [Book Your Appointment](https://gtk-thangella-17.github.io/Book-your-Appointment/)
+- [Code Merger and Divider and Differentiator](https://gtk-thangella-17.github.io/code-merger-and-divider-v1/)
+- [Deals and Tech News Content Code Generator](https://gtk-thangella-17.github.io/deals-and-tech-news-content-code-generator-v1/)
+- [StoreRoom-Post Product-webpage](https://gtk-thangella-17.github.io/StoreRoom-post-Product-Website/)
+- [StoreRoom-Browse Product-webpage](https://gtk-thangella-17.github.io/StoreRoom-Products-Website/)
+- [Land-Rover-Range-Rover-Cars-Website](https://gtk-thangella-17.github.io/Land-Rover-Range-Rover-Cars-Website/)
+- [Wish-Generator-website](https://gtk-thangella-17.github.io/Wish-Generator-website/)
+- [Resume-Cv-Generator-website](https://gtk-thangella-17.github.io/Resume-CV-Generator/)
+- [Code Generator](https://gtk-thangella-17.github.io/code-generator-v1/)
+- [GTK-AI-serverless-backendless](https://gtk-thangella-17.github.io/GTK-AI-serverless-backendless/)
+- [Renewit-Post-A-Product-webpage](https://gtk-thangella-17.github.io/Renewit-Post-A-Product-webpage/)
+- [Renewit-products-webpage](https://gtk-thangella-17.github.io/Renewit-products-webpage/)
+- [My-Company-webpage](https://gtk-thangella-17.github.io/My-Company-webpage/)
 
 ## Education
-
-- BSc (Honours) Computer Science And Gaming Development, BackstagePass Institute Of Gaming And Technology (2020 - Present)
+- BSc (Honours) Computer Science And Gaming Development, BackstagePass Institute Of Gaming And Technology (2024)
 - Intermediate (MPC), Sri Gayatri Junior College, Telangana State (2019)
 - SSC, Lotus Lap Public School, Telangana State (2017)
 
-## Skills
-
-- AWS
-- Linux
-- Git / GitHub
-- Jenkins
-- Shell Scripting (Bash)
-- Docker
-- Ansible
-- Continuous Integration / Continuous Deployment (CI/CD)
-- Apache Tomcat
-- Nexus
-
-## Experience
-
-As a fresher, I've worked on personal projects demonstrating my skills and passion for DevOps practices. These projects showcase my ability to learn and apply new technologies effectively.
-
-## Creativity and Proficiency
-
-- **Prompt Engineering:** Proficient in leveraging AI tools and creative ideas to generate innovative solutions.
-- **Front-End Development:** Excel in creating engaging and interactive user interfaces.
-- **Programming Languages:** Basic proficiency in C, C++, C#, Java, HTML, CSS, and JavaScript.
-
-## Contact Me
-
-Feel free to reach out to me via email or LinkedIn. I'm open to collaboration and networking opportunities.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
+## Contact
+- **Location:** Hyderabad, Telangana, INDIA
+- **Phone:** 8008133117
+- **Email:** [imgtk17@gmail.com](mailto:imgtk17@gmail.com)
+- **LinkedIn:** [linkedin.com/in/gthangella](https://www.linkedin.com/in/gthangella)
+- **GitHub:** [github.com/GTK-THANGELLA-17](https://github.com/GTK-THANGELLA-17)
