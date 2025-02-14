@@ -94,6 +94,16 @@ body {
   animation: fadeInUp 1s ease 0.5s forwards;
 }
 
+/* Typing Animation */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
 /* Sections */
 .section {
   padding: 6rem 2rem;
@@ -431,18 +441,12 @@ body {
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  50% { border-color: transparent; }
 }
 
 @keyframes bounce {
@@ -458,20 +462,21 @@ body {
 
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
-  .hero h1 {
-    font-size: 2.5rem;
+  .hero h1,
+  #typed-name {
+    font-size: 1.8rem;                   /* Smaller font size */
+    width: calc(100vw - 20px);            /* Full viewport width minus padding */
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+    white-space: normal;                /* Allow wrapping so "Gadidamalla" appears on top and "Thangella" below */
+    overflow: hidden;
+    box-sizing: border-box;
+    border-right: none;                 /* Remove typing cursor */
   }
   
   .section-title {
     font-size: 2rem;
-  }
-  
-  /* Adjust the typing name header (if used separately) */
-  #typed-name {
-    font-size: 2.5rem;
-    padding: 0 1rem;
-    word-break: break-word;
-    text-align: center;
   }
   
   .tagline {
@@ -492,6 +497,7 @@ body {
   }
 }
 </style>
+
 
 </head>
 <body>
@@ -536,7 +542,7 @@ body {
                 <p><strong>Professional Summary:</strong><br>
                     Driven and adaptable BSc Computer Science and Gaming Development student with a keen interest in DevOps practices. 
                     Proficient in AWS, Linux, Git, Jenkins, Docker, Ansible, and CI/CD. Skilled in AI-powered code generation, 
-                    leveraging emerging technologies to streamline development processes. Possesses basic knowledge in programming 
+                    leveraging emerging technologies to streamline development processes. Possesses knowledge in programming 
                     languages including C, C++, C#, Java, HTML, CSS, and JavaScript. Committed to leveraging emerging technologies 
                     and best practices to drive efficiency in a collaborative DevOps environment.</p>
 
