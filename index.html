@@ -6,7 +6,7 @@
     <title>Gadidamalla Thangella |Aws And DevOps </title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
+<style>
 /* Root Variables */
 :root {
   --primary: #00f7ff;
@@ -72,7 +72,9 @@ body {
   padding: 2rem;
 }
 
-.hero h1 {
+/* Typing Effect for Name in h2 */
+/* Animation starts immediately and runs once */
+.hero #typed-name {
   font-size: 4rem;
   line-height: 1.1;
   margin: 1rem 0;
@@ -81,8 +83,13 @@ body {
   -webkit-text-fill-color: transparent;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 4px solid var(--primary); /* Cursor effect */
-  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
+  border-right: 4px solid var(--primary); /* Cursor effect during typing */
+  animation: typing 3s steps(30) 0s forwards;
+}
+
+/* Remove any hover effects to keep the name straight */
+.hero #typed-name:hover {
+  animation: none;
 }
 
 .tagline {
@@ -98,10 +105,6 @@ body {
 @keyframes typing {
   from { width: 0; }
   to { width: 100%; }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
 }
 
 /* Sections */
@@ -445,34 +448,19 @@ body {
   to { width: 100%; }
 }
 
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-@keyframes bounce {
-  0%, 100% { transform: translateY(0); }
-  25% { transform: translateY(-10px); }
-  50% { transform: translateY(5px); }
-  75% { transform: translateY(-5px); }
-}
-
-.hero:hover h1 {
-  animation: bounce 0.5s ease-out;
-}
-
 /* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
-  .hero h1,
-  #typed-name {
-    font-size: 1.8rem;                   /* Smaller font size */
-    width: calc(100vw - 20px);            /* Full viewport width minus padding */
+  .hero #typed-name {
+    font-size: 1.8rem;
+    width: calc(100vw - 20px);
     margin: 0 auto;
     padding: 0 10px;
     text-align: center;
-    white-space: normal;                /* Allow wrapping so "Gadidamalla" appears on top and "Thangella" below */
+    white-space: normal; /* allow wrapping */
     overflow: hidden;
     box-sizing: border-box;
-    border-right: none;                 /* Remove typing cursor */
+    border-right: none;
+    animation: typing 3s steps(30) 0s forwards;
   }
   
   .section-title {
@@ -503,13 +491,12 @@ body {
 <body>
     <!-- Hero Section -->
 <section class="hero">
-    <div class="profile-container">
-        <img src="Assests/images/G.Thangella.jpg" alt="Gadidamalla Thangella" class="profile-photo">
-    </div>
-    
-    <!-- Typing Effect for Name -->
-    <h1 id="typed-name">Gadidamalla Thangella</h1>
-    <p class="tagline">AWS & DevOps Engineer </p>
+  <div class="profile-container">
+    <img src="Assests/images/G.Thangella.jpg" alt="Gadidamalla Thangella" class="profile-photo">
+  </div>
+  <!-- Typing Effect for Name in h2 -->
+  <h2 id="typed-name">Gadidamalla Thangella</h2>
+
 
     <div class="cta-container">
         <a href="Assests/pdf/G.Thangella-DevOps Role -Resume -2024.pdf" download 
