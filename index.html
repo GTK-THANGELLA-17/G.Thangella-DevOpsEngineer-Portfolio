@@ -7,662 +7,492 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #00f7ff;
-            --secondary: #0a0a0f;
-            --accent: #ff4d5a;
-            --text: #f0f0f0;
-            --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
-        }
+/* Root Variables */
+:root {
+  --primary: #00f7ff;
+  --secondary: #0a0a0f;
+  --accent: #ff4d5a;
+  --text: #f0f0f0;
+  --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Space Grotesk', sans-serif;
-        }
+/* Global Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
 
-        body {
-            background: var(--secondary);
-            color: var(--text);
-            overflow-x: hidden;
-            line-height: 1.6;
-        }
+body {
+  background: var(--secondary);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
 
-       /* Profile Animation */
+/* Profile Animation */
 .profile-container {
-    position: relative;
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-    border-radius: 50%;
-    background: conic-gradient(var(--primary), var(--accent), var(--primary)); /* Static gradient */
-    padding: 5px;
-    transition: transform 0.3s ease; /* Smooth zoom effect */
-    cursor: pointer;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: conic-gradient(var(--primary), var(--accent), var(--primary));
+  padding: 5px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .profile-container:hover {
-    transform: scale(1.05); /* Subtle zoom effect on hover */
+  transform: scale(1.05);
 }
 
 .profile-photo {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid var(--secondary);
-    transition: transform 0.3s ease; /* Smooth transition on hover */
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--secondary);
+  transition: transform 0.3s ease;
 }
 
 .profile-container:hover .profile-photo {
-    transform: scale(1.1); /* Slight zoom-in effect for the photo */
+  transform: scale(1.1);
 }
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 2rem;
-
-}
-
-.tagline {
-    font-size: 1.5rem;
-    color: var(--primary);
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin: 2rem 0;
-    animation: fadeInUp 1s ease 0.5s forwards;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem;
 }
 
 .hero h1 {
-    font-size: 4rem;
-    line-height: 1.1;
-    margin: 1rem 0;
-    background: linear-gradient(45deg, var(--primary), var(--accent));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
-    overflow: hidden;
-    border-right: 4px solid var(--primary); /* Cursor effect */
-    animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite; /* Typing and cursor blinking effect */
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 1rem 0;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 4px solid var(--primary); /* Cursor effect */
+  animation: typing 3s steps(30) 1s forwards, blink 0.75s step-end infinite;
 }
 
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.tagline {
+  font-size: 1.5rem;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 2rem 0;
+  animation: fadeInUp 1s ease 0.5s forwards;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+/* Sections */
+.section {
+  padding: 6rem 2rem;
+  position: relative;
 }
 
-@keyframes blink {
-    50% {
-        border-color: transparent; /* Makes the cursor blink */
-    }
-}
-
-/* Hero Section Hover Effects */
-.hero:hover h1 {
-    animation: bounce 0.5s ease-out; /* Bounce effect on hover */
-}
-
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    25% { transform: translateY(-10px); }
-    50% { transform: translateY(5px); }
-    75% { transform: translateY(-5px); }
-}
-
-/* Section Titles */
 .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    position: relative;
-    animation: fadeInUp 1s ease;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-align: center;
+  position: relative;
+  animation: fadeInUp 1s ease;
+}
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: var(--transition);
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  background: rgba(0, 247, 255, 0.05);
+}
+
+.skill-icon {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.skill-card:hover .skill-icon {
+  transform: scale(1.2) rotate(360deg);
+}
+
+/* Experience Timeline */
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 30px;
+}
+
+.timeline-item {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 3px solid var(--primary);
+  position: relative;
+  animation: fadeInRight 1s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 247, 255, 0.1);
+}
+
+/* Projects Grid & Cards */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: var(--transition);
+  box-shadow: 0 10px 20px rgba(0, 247, 255, 0.1);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2);
+}
+
+.project-card ul {
+  list-style-type: none;
+  padding: 20px;
+  color: var(--text);
+}
+
+.project-card li {
+  margin: 10px 0;
+  transition: transform 0.3s ease;
+}
+
+.project-card li:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 247, 255, 0.05);
+  border-radius: 8px;
+}
+
+.project-card a {
+  text-decoration: none;
+  color: var(--text);
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.project-card a:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
+}
+
+.project-card a i {
+  margin-right: 8px;
+  font-size: 1.3rem;
+}
+
+/* Contact Form */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form .form-group {
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.contact-form .form-group:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 247, 255, 0.05);
+  border-radius: 8px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.social-link {
+  font-size: 1.5rem;
+  color: var(--text);
+  transition: var(--transition);
+}
+
+.social-link:hover {
+  color: var(--primary);
+  transform: translateY(-3px);
 }
 
 /* Button Styling */
 .btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
+  background-color: #0056b3;
+  transform: translateY(-2px);
 }
 
 .btn:active {
-    background-color: #004085;
-    transform: translateY(0);
-}
-
-
-        /* Sections */
-        .section {
-            padding: 6rem 2rem;
-            position: relative;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            position: relative;
-            animation: fadeInUp 1s ease;
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .skill-card {
-            background: rgba(255,255,255,0.02);
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 2rem;
-            border-radius: 15px;
-            text-align: center;
-            transition: var(--transition);
-        }
-
-        .skill-card:hover {
-            transform: translateY(-10px);
-            background: rgba(0,247,255,0.05);
-        }
-
-        .skill-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            transition: var(--transition);
-        }
-
-        .skill-card:hover .skill-icon {
-            transform: scale(1.2) rotate(360deg);
-        }
-
-        /* Experience Timeline */
-        .timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 0 auto;
-            padding-left: 30px;
-        }
-
-        .timeline-item {
-            padding: 2rem;
-            margin-bottom: 2rem;
-            background: rgba(255,255,255,0.02);
-            border-left: 3px solid var(--primary);
-            position: relative;
-            animation: fadeInRight 1s ease;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .project-card {
-            background: rgba(255,255,255,0.02);
-            border-radius: 15px;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,247,255,0.1);
-        }
-
-        /* Contact Form */
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .form-group {
-            margin-bottom: 2rem;
-        }
-
-        .form-input {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(255,255,255,0.05);
-            border: 2px solid rgba(255,255,255,0.1);
-            border-radius: 8px;
-            color: var(--text);
-            transition: var(--transition);
-        }
-
-        .form-input:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        /* Social Links */
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .social-link {
-            font-size: 1.5rem;
-            color: var(--text);
-            transition: var(--transition);
-        }
-
-        .social-link:hover {
-            color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-        }
-		
-		/* Button Styling */
-.btn {
-    display: inline-flex;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-.btn:active {
-    background-color: #004085;
-    transform: translateY(0);
+  background-color: #004085;
+  transform: translateY(0);
 }
 
 .btn i {
-    margin-right: 8px;
+  margin-right: 8px;
 }
 
 /* Custom Accent Button */
 .btn-accent {
-    background-color: #f36f6f; /* Accent color */
-    color: white;
+  background-color: #f36f6f;
+  color: white;
 }
 
 .btn-accent:hover {
-    background-color: #e34e4e;
+  background-color: #e34e4e;
 }
 
 .btn-accent:active {
-    background-color: #d84141;
+  background-color: #d84141;
 }
 
-/* Styling for the Download CV Button */
+/* Download CV Button */
 .btn-download {
-    background-color: #333; /* Dark background for the Download CV button */
-    color: white;
+  background-color: #333;
+  color: white;
 }
 
 .btn-download:hover {
-    background-color: #444;
+  background-color: #444;
 }
 
 .btn-download:active {
-    background-color: #555;
+  background-color: #555;
 }
 
-
-/* Projects Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: var(--transition);
-    box-shadow: 0 10px 20px rgba(0, 247, 255, 0.1);
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2);
-}
-
-.project-card ul {
-    list-style-type: none;
-    padding: 20px;
-    color: var(--text);
-}
-
-.project-card li {
-    margin: 10px 0;
-}
-
-.project-card a {
-    text-decoration: none;
-    color: var(--text);
-    font-size: 1.1rem;
-    transition: var(--transition);
-}
-
-.project-card a:hover {
-    color: var(--primary);
-    transform: translateY(-3px);
-}
-
-.project-card a i {
-    margin-right: 8px;
-    font-size: 1.3rem;
-}
-
-/* Add a Hover Effect for the List Items */
-.project-card li:hover {
-    transform: translateY(-5px);
-    background: rgba(0, 247, 255, 0.05);
-    border-radius: 8px;
-}
-
-/* Customize the section title */
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    position: relative;
-    animation: fadeInUp 1s ease;
-}
 /* General Card Hover Effect */
 .card-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card-hover:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2);
-}
-
-/* Projects Grid */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.02);
-    border-radius: 15px;
-    overflow: hidden;
-    transition: var(--transition);
-    box-shadow: 0 10px 20px rgba(0, 247, 255, 0.1);
-}
-
-/* Applying Hover Effect to Project Cards */
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2);
-}
-
-/* Add hover effect to other sections like Skill Cards */
-.skill-card,
-.timeline-item,
-.contact-form .form-group,
-.project-card {
-    /* Using common card-hover class for uniform hover effect */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Skill Cards */
-.skill-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-}
-
-.skill-card:hover {
-    transform: translateY(-10px);
-    background: rgba(0, 247, 255, 0.05);
-}
-
-/* Timeline Items */
-.timeline-item {
-    padding: 2rem;
-    margin-bottom: 2rem;
-    background: rgba(255, 255, 255, 0.02);
-    border-left: 3px solid var(--primary);
-    position: relative;
-    animation: fadeInRight 1s ease;
-}
-
-/* Apply hover effect to timeline items */
-.timeline-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.1);
-}
-
-/* Contact Form Groups (apply hover effect to form groups if desired) */
-.contact-form .form-group:hover {
-    transform: translateY(-5px);
-    background: rgba(0, 247, 255, 0.05);
-    border-radius: 8px;
-}
-
-/* Apply hover effect to buttons */
-.btn:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-.btn-accent:hover {
-    background-color: #e34e4e;
-}
-
-/* General Hover Effect Class for Buttons, Cards, Sections */
-.card-hover:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2);
-}
-
-/* Projects List Hover */
-.project-card li:hover {
-    transform: translateY(-5px);
-    background: rgba(0, 247, 255, 0.05);
-    border-radius: 8px;
-}
-
-/* Add hover effect for other sections like the Contact Form */
-.contact-form .form-group:hover {
-    transform: translateY(-5px);
-    background: rgba(0, 247, 255, 0.05);
-    border-radius: 8px;
-}
-
-/* Customize the section title */
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    position: relative;
-    animation: fadeInUp 1s ease;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2);
 }
 
 /* Education Section */
 #education {
-    background: rgba(0, 0, 0, 0.05);
-    padding: 6rem 2rem;
-    color: var(--text);
-    position: relative;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 6rem 2rem;
+  color: var(--text);
+  position: relative;
+}
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
+#education .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-    .section-title {
-        font-size: 2.5rem;
-        margin-bottom: 2.5rem;
-        text-align: center;
-        position: relative;
-        animation: fadeInUp 1s ease;
-    }
+#education .section-title {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  position: relative;
+  animation: fadeInUp 1s ease;
+}
 
-    .education-cards {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
-    }
+#education .education-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
-    .education-card {
-        background: rgba(255, 255, 255, 0.02);
-        border-radius: 15px;
-        overflow: hidden;
-        padding: 2rem;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        box-shadow: 0 10px 20px rgba(0, 247, 255, 0.1);
-    }
+#education .education-card {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 247, 255, 0.1);
+}
 
-    .education-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2);
-    }
+#education .education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(0, 247, 255, 0.2);
+}
 
-    .education-card ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
+#education .education-card ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .education-card li {
-        font-size: 1.1rem;
-        margin: 15px 0;
-        color: var(--text);
-        display: flex;
-        align-items: center;
-        transition: transform 0.3s ease;
-    }
+#education .education-card li {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
 
-    .education-card li i {
-        margin-right: 10px;
-        color: var(--primary);
-    }
+#education .education-card li i {
+  margin-right: 10px;
+  color: var(--primary);
+}
 
-    .education-card li:hover {
-        transform: translateY(-5px);
-        background: rgba(0, 247, 255, 0.05);
-        border-radius: 8px;
-    }
+#education .education-card li:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 247, 255, 0.05);
+  border-radius: 8px;
 }
 
 /* Animations */
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-/* Responsive Design for Small Screens */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  25% { transform: translateY(-10px); }
+  50% { transform: translateY(5px); }
+  75% { transform: translateY(-5px); }
+}
+
+.hero:hover h1 {
+  animation: bounce 0.5s ease-out;
+}
+
+/* Responsive Design for Mobile Devices */
 @media (max-width: 768px) {
-    .section-title {
-        font-size: 2rem;
-    }
-
-    .education-card {
-        padding: 1.5rem;
-    }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  /* Adjust the typing name header (if used separately) */
+  #typed-name {
+    font-size: 2.5rem;
+    padding: 0 1rem;
+    word-break: break-word;
+    text-align: center;
+  }
+  
+  .tagline {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    width: auto;
+  }
+  
+  #education .education-card {
+    padding: 1.5rem;
+  }
 }
+</style>
 
-    </style>
 </head>
 <body>
     <!-- Hero Section -->
@@ -740,154 +570,272 @@
 
    <!-- Skills Section -->
 <section id="skills" class="section">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="skills-grid">
-        
-        <!-- DevOps & Infrastructure -->
-        <div class="skill-card">
-            <i class="fab fa-git skill-icon"></i>
-            <h3>Git</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-jenkins skill-icon"></i>
-            <h3>Jenkins</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-tools skill-icon"></i>
-            <h3>Maven</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-ansible skill-icon"></i>
-            <h3>Ansible</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-docker skill-icon"></i>
-            <h3>Docker</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-kubernetes skill-icon"></i>
-            <h3>Kubernetes</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-terraform skill-icon"></i>
-            <h3>Terraform</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-linux skill-icon"></i>
-            <h3>Linux & Windows</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-server skill-icon"></i>
-            <h3>Kops</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-sync-alt skill-icon"></i>
-            <h3>Argo CD</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-database skill-icon"></i>
-            <h3>Nexus</h3>
-        </div>
-
-        <!-- Cloud & Web Technologies -->
-        <div class="skill-card">
-            <i class="fab fa-aws skill-icon"></i>
-            <h3>AWS</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-database skill-icon"></i>
-            <h3>Apache Tomcat</h3>
-        </div>
-
-        <!-- Monitoring & Analytics -->
-        <div class="skill-card">
-            <i class="fas fa-chart-line skill-icon"></i>
-            <h3>Prometheus & Grafana</h3>
-        </div>
-
-        <!-- AI & Development -->
-        <div class="skill-card">
-            <i class="fas fa-code skill-icon"></i>
-            <h3>AI-powered Code Generator</h3>
-        </div>
-
-        <!-- Game Development & Design -->
-        <div class="skill-card">
-            <i class="fas fa-gamepad skill-icon"></i>
-            <h3>Unity</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-gamepad skill-icon"></i>
-            <h3>Unreal Engine</h3>
-        </div>
-
-        <!-- Graphics & Design -->
-        <div class="skill-card">
-            <i class="fas fa-palette skill-icon"></i>
-            <h3>Photoshop</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-cube skill-icon"></i>
-            <h3>Autodesk Maya</h3>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-cube skill-icon"></i>
-            <h3>Blender</h3>
-        </div>
-
-        <!-- Video Editing -->
-        <div class="skill-card">
-            <i class="fas fa-video skill-icon"></i>
-            <h3>Premiere Pro</h3>
-        </div>
-
-        <!-- Programming Languages & Web Development -->
-        <div class="skill-card">
-            <i class="fas fa-code skill-icon"></i>
-            <h3>C</h3>
-            <p>Procedural programming language commonly used for system/software development and embedded systems.</p>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-code skill-icon"></i>
-            <h3>C++</h3>
-            <p>General-purpose language often used for system/application software, game development, and high-performance applications.</p>
-        </div>
-        <div class="skill-card">
-            <i class="fas fa-code skill-icon"></i>
-            <h3>Java</h3>
-            <p>Widely used object-oriented programming language, known for its portability across platforms (write once, run anywhere).</p>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-python skill-icon"></i>
-            <h3>Python</h3>
-            <p>Versatile high-level language, widely used in web development, data science, AI, automation, and more.</p>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-windows skill-icon"></i>
-            <h3>C#</h3>
-            <p>Modern object-oriented language used for building Windows applications, games (via Unity), and web services.</p>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-html5 skill-icon"></i>
-            <h3>HTML</h3>
-            <p>The standard markup language for creating web pages and web applications.</p>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-css3-alt skill-icon"></i>
-            <h3>CSS</h3>
-            <p>Style sheet language used for describing the look and formatting of a document written in HTML.</p>
-        </div>
-        <div class="skill-card">
-            <i class="fab fa-js skill-icon"></i>
-            <h3>JavaScript</h3>
-            <p>Popular programming language primarily used for creating interactive effects within web browsers.</p>
-        </div>
-        <div class="skill-card">
-            <h3>Basic Knowledge In These Programming Languages</h3>
-            <p>Understanding of fundamental concepts across multiple languages and frameworks.</p>
-        </div>
+  <h2 class="section-title">Technical Skills</h2>
+  <div class="skills-grid">
+    <!-- Git -->
+    <div class="skill-card">
+      <i class="fab fa-git skill-icon"></i>
+      <h3>Git</h3>
+      <p>
+        Git is a distributed version control system that tracks code changes.<br>
+        It enables effective collaboration and maintains a history of revisions.
+      </p>
     </div>
+    <!-- Jenkins -->
+    <div class="skill-card">
+      <i class="fab fa-jenkins skill-icon"></i>
+      <h3>Jenkins</h3>
+      <p>
+        Jenkins automates continuous integration and delivery processes.<br>
+        It streamlines building, testing, and deploying software projects.
+      </p>
+    </div>
+    <!-- Maven -->
+    <div class="skill-card">
+      <i class="fas fa-tools skill-icon"></i>
+      <h3>Maven</h3>
+      <p>
+        Maven is a build automation and dependency management tool for Java.<br>
+        It simplifies project builds and resolves dependencies automatically.
+      </p>
+    </div>
+    <!-- Ansible -->
+    <div class="skill-card">
+      <i class="fab fa-ansible skill-icon"></i>
+      <h3>Ansible</h3>
+      <p>
+        Ansible automates IT tasks like configuration and application deployment.<br>
+        It uses simple YAML playbooks to orchestrate complex workflows.
+      </p>
+    </div>
+    <!-- Docker -->
+    <div class="skill-card">
+      <i class="fab fa-docker skill-icon"></i>
+      <h3>Docker</h3>
+      <p>
+        Docker packages applications into portable, isolated containers.<br>
+        It ensures consistent environments from development through production.
+      </p>
+    </div>
+    <!-- Kubernetes -->
+    <div class="skill-card">
+      <i class="fab fa-kubernetes skill-icon"></i>
+      <h3>Kubernetes</h3>
+      <p>
+        Kubernetes orchestrates containerized applications at scale.<br>
+        It automates deployment, scaling, and management of container clusters.
+      </p>
+    </div>
+    <!-- Terraform -->
+    <div class="skill-card">
+      <i class="fab fa-terraform skill-icon"></i>
+      <h3>Terraform</h3>
+      <p>
+        Terraform provisions and manages infrastructure as code.<br>
+        It automates cloud resource setups across various providers.
+      </p>
+    </div>
+    <!-- Linux & Windows -->
+    <div class="skill-card">
+      <i class="fab fa-linux skill-icon"></i>
+      <h3>Linux &amp; Windows</h3>
+      <p>
+        Linux is known for its stability and open-source nature, while Windows offers a user-friendly interface.<br>
+        Both operating systems are essential in different IT environments.
+      </p>
+    </div>
+    <!-- Kops -->
+    <div class="skill-card">
+      <i class="fas fa-server skill-icon"></i>
+      <h3>Kops</h3>
+      <p>
+        Kops simplifies the provisioning and management of Kubernetes clusters.<br>
+        It automates cluster creation and maintenance on cloud platforms.
+      </p>
+    </div>
+    <!-- Argo CD -->
+    <div class="skill-card">
+      <i class="fas fa-sync-alt skill-icon"></i>
+      <h3>Argo CD</h3>
+      <p>
+        Argo CD is a GitOps tool for continuous delivery in Kubernetes.<br>
+        It ensures your cluster’s live state matches the desired state in Git.
+      </p>
+    </div>
+    <!-- Nexus -->
+    <div class="skill-card">
+      <i class="fas fa-database skill-icon"></i>
+      <h3>Nexus</h3>
+      <p>
+        Nexus is a repository manager for storing build artifacts and dependencies.<br>
+        It streamlines artifact storage and distribution across teams.
+      </p>
+    </div>
+    <!-- AWS -->
+    <div class="skill-card">
+      <i class="fab fa-aws skill-icon"></i>
+      <h3>AWS</h3>
+      <p>
+        AWS is a comprehensive cloud platform offering scalable services.<br>
+        It provides robust, cost-effective infrastructure solutions for any size project.
+      </p>
+    </div>
+    <!-- Apache Tomcat -->
+    <div class="skill-card">
+      <i class="fas fa-database skill-icon"></i>
+      <h3>Apache Tomcat</h3>
+      <p>
+        Apache Tomcat is a web server and servlet container for Java applications.<br>
+        It offers a reliable environment for deploying dynamic web content.
+      </p>
+    </div>
+    <!-- Prometheus & Grafana -->
+    <div class="skill-card">
+      <i class="fas fa-chart-line skill-icon"></i>
+      <h3>Prometheus &amp; Grafana</h3>
+      <p>
+        Prometheus collects and stores time-series data while Grafana visualizes it.<br>
+        Together, they provide powerful monitoring and insights into system performance.
+      </p>
+    </div>
+    <!-- AI-powered Code Generator -->
+    <div class="skill-card">
+      <i class="fas fa-code skill-icon"></i>
+      <h3>AI-powered Code Generator</h3>
+      <p>
+        This tool leverages AI to assist in writing and optimizing code.<br>
+        It accelerates development by offering context-aware code suggestions.
+      </p>
+    </div>
+    <!-- Unity -->
+    <div class="skill-card">
+      <i class="fas fa-gamepad skill-icon"></i>
+      <h3>Unity</h3>
+      <p>
+        Unity is a versatile engine for developing 2D and 3D games.<br>
+        It provides extensive tools for creating interactive and immersive experiences.
+      </p>
+    </div>
+    <!-- Unreal Engine -->
+    <div class="skill-card">
+      <i class="fas fa-gamepad skill-icon"></i>
+      <h3>Unreal Engine</h3>
+      <p>
+        Unreal Engine delivers high-fidelity graphics for advanced game development.<br>
+        It is used to create immersive and realistic gaming environments.
+      </p>
+    </div>
+    <!-- Photoshop -->
+    <div class="skill-card">
+      <i class="fas fa-palette skill-icon"></i>
+      <h3>Photoshop</h3>
+      <p>
+        Adobe Photoshop is the industry standard for photo editing and graphic design.<br>
+        It empowers users to create and manipulate digital visuals with precision.
+      </p>
+    </div>
+    <!-- Autodesk Maya -->
+    <div class="skill-card">
+      <i class="fas fa-cube skill-icon"></i>
+      <h3>Autodesk Maya</h3>
+      <p>
+        Maya is a professional 3D modeling and animation software used in films and games.<br>
+        It offers advanced tools for crafting realistic characters and environments.
+      </p>
+    </div>
+    <!-- Blender -->
+    <div class="skill-card">
+      <i class="fas fa-cube skill-icon"></i>
+      <h3>Blender</h3>
+      <p>
+        Blender is an open-source 3D creation suite for modeling, animation, and rendering.<br>
+        It’s a versatile and cost-effective tool for artists and developers alike.
+      </p>
+    </div>
+    <!-- Premiere Pro -->
+    <div class="skill-card">
+      <i class="fas fa-video skill-icon"></i>
+      <h3>Premiere Pro</h3>
+      <p>
+        Adobe Premiere Pro is a leading video editing software for professionals.<br>
+        It offers a comprehensive set of tools for creating and refining video content.
+      </p>
+    </div>
+    <!-- C -->
+    <div class="skill-card">
+      <i class="fas fa-code skill-icon"></i>
+      <h3>C</h3>
+      <p>
+        C is a foundational procedural programming language known for its efficiency.<br>
+        It’s essential for systems programming and embedded applications.
+      </p>
+    </div>
+    <!-- C++ -->
+    <div class="skill-card">
+      <i class="fas fa-code skill-icon"></i>
+      <h3>C++</h3>
+      <p>
+        C++ builds on C with object-oriented features for complex software development.<br>
+        It is used for high-performance applications, games, and system software.
+      </p>
+    </div>
+    <!-- Java -->
+    <div class="skill-card">
+      <i class="fas fa-code skill-icon"></i>
+      <h3>Java</h3>
+      <p>
+        Java is an object-oriented language designed for cross-platform compatibility.<br>
+        It powers enterprise applications, mobile apps, and large-scale systems.
+      </p>
+    </div>
+    <!-- Python -->
+    <div class="skill-card">
+      <i class="fab fa-python skill-icon"></i>
+      <h3>Python</h3>
+      <p>
+        Python is a high-level language celebrated for its readability and versatility.<br>
+        It’s widely used in web development, data science, AI, automation, and more.
+      </p>
+    </div>
+    <!-- C# -->
+    <div class="skill-card">
+      <i class="fab fa-windows skill-icon"></i>
+      <h3>C#</h3>
+      <p>
+        C# is a modern, object-oriented language developed by Microsoft.<br>
+        It’s used for building Windows apps, games (via Unity), and enterprise software.
+      </p>
+    </div>
+    <!-- HTML -->
+    <div class="skill-card">
+      <i class="fab fa-html5 skill-icon"></i>
+      <h3>HTML</h3>
+      <p>
+        HTML is the standard markup language for creating web pages.<br>
+        It structures content and lays the foundation for web design.
+      </p>
+    </div>
+    <!-- CSS -->
+    <div class="skill-card">
+      <i class="fab fa-css3-alt skill-icon"></i>
+      <h3>CSS</h3>
+      <p>
+        CSS styles web pages, controlling layout, colors, and fonts.<br>
+        It transforms HTML content into visually engaging designs.
+      </p>
+    </div>
+    <!-- JavaScript -->
+    <div class="skill-card">
+      <i class="fab fa-js skill-icon"></i>
+      <h3>JavaScript</h3>
+      <p>
+        JavaScript adds interactivity to websites with dynamic programming.<br>
+        It is essential for modern, responsive web applications.
+      </p>
+    </div>
+  </div>
 </section>
+
 
 
     <!-- Experience Section -->
