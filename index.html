@@ -590,14 +590,24 @@ body {
   position: absolute;  /* Change to absolute to make it stay only in the top part */
   top: 20px;           /* Distance from the top */
   right: 20px;         /* Distance from the right side */
-  padding: 10px 20px;
+  padding: 5px 10px;   /* Make button smaller */
   background-color: var(--button-background);
   color: #fff;
-  border-radius: 50px;
+  border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s ease, transform 0.2s ease;
   font-size: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;          /* Set width */
+  height: 40px;         /* Set height */
+}
+
+/* Add icons for sun and moon */
+.toggle-btn .icon {
+  font-size: 1.2rem;    /* Adjust the icon size */
 }
 
 /* Hover effect */
@@ -614,33 +624,16 @@ body {
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-  .hero {
-    padding: 1rem;
+  .toggle-btn {
+    width: 35px;         /* Make the button even smaller on mobile */
+    height: 35px;
   }
 
-  .hero #typed-name {
-    font-size: 1.8rem;
-    width: calc(100vw - 20px);
-    margin: 0 auto;
-    padding: 0 10px;
-    text-align: center;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .btn {
-    padding: 10px 15px;
-    font-size: 14px;
-  }
-
-  /* Adjust the call-to-action button layout for smaller screens */
-  .cta-container {
-    flex-direction: column;  /* Stack the buttons vertically */
-    gap: 15px;  /* Adjust the gap for a better layout on small screens */
+  .toggle-btn .icon {
+    font-size: 1rem;     /* Adjust icon size for small screen */
   }
 }
+
 
 
 </style>
@@ -649,9 +642,11 @@ body {
 
 </head>
 <body>
-<button class="toggle-btn">
-  Toggle Mode
+<!-- Toggle Button with Icons -->
+<button class="toggle-btn" id="dark-mode-toggle">
+  <i class="icon fas fa-sun"></i> <!-- Sun icon by default -->
 </button>
+
 
 <!-- Hero Section -->
     <section class="hero">
@@ -662,13 +657,7 @@ body {
             <span class="first-name">Gadidamalla</span> <span class="last-name">Thangella</span>
         </h2>
 
-        <div class="cta-container">
-    <a href="Assests/pdf/G.THANGELLA__RESUME.pdf" download class="btn">
-        <i class="fas fa-download"></i> Download Single page Resume
-    </a>
-    <a href="Assests/pdf/G.THANGELLA--Resume.pdf" download class="btn btn-long-cv">
-        <i class="fas fa-download"></i> Download  CV
-    </a>
+        
 </div>
 
 
@@ -711,10 +700,13 @@ body {
 		   I am excited to leverage these skills to contribute to innovative, technology-driven initiatives.</p>
 
         <!-- Resume download button with icon -->
-        <a href=".\Assests\pdf\Gadidamalla Thangella-Resume-Devops.pdf" download class="btn" style="background-color: #333;">
+        <a href=".\Assests/pdf/G.THANGELLA--Resume.pdf" download class="btn" style="background-color: #333;">
           <i class="fas fa-download"></i> Download CV
         </a>
-
+<!-- Resume download button with icon -->
+        <a href=".\Assests/pdf/G.THANGELLA__Resume.pdf" download class="btn" style="background-color: #333;">
+          <i class="fas fa-download"></i> Download Single Page Resume        </a>
+   
         <!-- Get in Touch button with icon -->
         <a href="#get-in-touch" class="btn" style="background-color: var(--accent); margin-left: 1rem;">
           <i class="fas fa-rocket"></i> Get in Touch
@@ -1271,21 +1263,43 @@ const assistiveBall = document.getElementById('assistive-ball');
         });
 		
 		// Get the button and the root element
-  const toggleBtn = document.querySelector('.toggle-btn');
-  const root = document.documentElement;
+const toggleBtn = document.querySelector('.toggle-btn');
+const root = document.documentElement;
 
-  // Check for the user's preferred theme in localStorage (or use default)
-  const currentTheme = localStorage.getItem('theme') || 'dark';
-  root.setAttribute('data-theme', currentTheme);
+// Get the icon inside the button
+const icon = toggleBtn.querySelector('.icon');
 
-  // Toggle dark/light mode
-  toggleBtn.addEventListener('click', () => {
-    const newTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-    root.setAttribute('data-theme', newTheme);
-    
-    // Save the selected theme in localStorage
-    localStorage.setItem('theme', newTheme);
-  });
+// Check for the user's preferred theme in localStorage (or use default)
+const currentTheme = localStorage.getItem('theme') || 'dark';
+root.setAttribute('data-theme', currentTheme);
+
+// Set the initial icon based on the current theme
+if (currentTheme === 'dark') {
+  icon.classList.add('fa-sun');  // Sun icon for dark mode
+  icon.classList.remove('fa-moon');
+} else {
+  icon.classList.add('fa-moon'); // Moon icon for light mode
+  icon.classList.remove('fa-sun');
+}
+
+// Toggle dark/light mode
+toggleBtn.addEventListener('click', () => {
+  const newTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+  root.setAttribute('data-theme', newTheme);
+  
+  // Save the selected theme in localStorage
+  localStorage.setItem('theme', newTheme);
+
+  // Toggle the icon between sun and moon
+  if (newTheme === 'dark') {
+    icon.classList.add('fa-sun');
+    icon.classList.remove('fa-moon');
+  } else {
+    icon.classList.add('fa-moon');
+    icon.classList.remove('fa-sun');
+  }
+});
+
   
   
     document.addEventListener("DOMContentLoaded", function() {
