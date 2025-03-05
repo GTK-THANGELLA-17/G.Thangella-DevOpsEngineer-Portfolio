@@ -13,7 +13,22 @@
   --secondary: #0a0a0f;
   --accent: #ff4d5a;
   --text: #f0f0f0;
+  --background: #141010;
+  --button-background: #007bff;
+  --button-hover: #0056b3;
+  --button-active: #004085;
   --transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+[data-theme='light'] {
+  --primary: #007bff;
+  --secondary: #f0f0f0;
+  --accent: #f36f6f;
+  --text: #141010;
+  --background: #ffffff;
+  --button-background: #ff4d5a;
+  --button-hover: #e34e4e;
+  --button-active: #d84141;
 }
 
 /* Global Resets */
@@ -25,10 +40,11 @@
 }
 
 body {
-  background: var(--secondary);
+  background: var(--background);
   color: var(--text);
   overflow-x: hidden;
   line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 /* Profile Animation */
@@ -295,7 +311,7 @@ body {
   display: inline-flex;
   align-items: center;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: var(--button-background);
   color: #fff;
   font-size: 16px;
   font-weight: 600;
@@ -307,12 +323,12 @@ body {
 }
 
 .btn:hover {
-  background-color: #0056b3;
+  background-color: var(--button-hover);
   transform: translateY(-2px);
 }
 
 .btn:active {
-  background-color: #004085;
+  background-color: var(--button-active);
   transform: translateY(0);
 }
 
@@ -494,40 +510,177 @@ body {
     padding: 1.5rem;
   }
 }
+
+/* Add your existing styles for hero, profile, etc. */
+
+/* Assistive Ball & Sidebar Styles */
+.assistive-ball {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #00bcd4;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+}
+
+.assistive-ball:hover {
+    background-color: #0097a7;
+}
+
+.sidebar-options {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    display: none; /* Initially hidden */
+    background-color: #141010;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    z-index: 1000;
+}
+
+.sidebar-options ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-options li {
+    margin: 10px 0;
+}
+
+.sidebar-options a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.sidebar-options a i {
+    margin-right: 8px;
+}
+
+.sidebar-options a:hover {
+    color: #00bcd4;
+}
+
+/* Toggle Dark Mode Button */
+.toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background-color: var(--button-background);
+  color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-size: 1rem;
+}
+
+.toggle-btn:hover {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+.toggle-btn:active {
+  background-color: var(--button-active);
+  transform: translateY(0);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    padding: 1rem;
+  }
+
+  .hero #typed-name {
+    font-size: 1.8rem;
+    width: calc(100vw - 20px);
+    margin: 0 auto;
+    padding: 0 10px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .btn {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+
+@media (max-width: 768px) {
+  .cta-container {
+    flex-direction: column;  /* Stack the buttons vertically */
+    gap: 15px;  /* Adjust the gap for a better layout on small screens */
+  }
+}
+
 </style>
 
 
 
 </head>
 <body>
-   <!-- Hero Section -->
-<section class="hero">
-  <div class="profile-container">
-    <img src="Assests/images/G.Thangella.jpg" alt="Gadidamalla Thangella" class="profile-photo">
-  </div>
-  <!-- Typing Effect for Name in h2 -->
-  <h2 id="typed-name">
-    <span class="first-name">Gadidamalla</span> <span class="last-name">Thangella</span>
-  </h2>
+<button class="toggle-btn">
+  Toggle Mode
+</button>
 
-  <div class="cta-container">
-    <a href="Assests/pdf/G.Thangella-DevOps Role -Resume -2024.pdf" download class="btn" style="animation: fadeInUp 1s ease 0.4s backwards;">
-      <i class="fas fa-download"></i> Download CV
-    </a>
-  </div>
+<!-- Hero Section -->
+    <section class="hero">
+        <div class="profile-container">
+            <img src="Assests/images/G.Thangella.jpg" alt="Gadidamalla Thangella" class="profile-photo">
+        </div>
+        <h2 id="typed-name">
+            <span class="first-name">Gadidamalla</span> <span class="last-name">Thangella</span>
+        </h2>
 
-  <!-- Social Links -->
-  <div class="social-links">
-    <a href="https://linkedin.com/in/gthangella" class="social-link" target="_blank">
-      <i class="fab fa-linkedin-in"></i>
+        <div class="cta-container">
+    <a href="Assests/pdf/G.THANGELLA__RESUME.pdf" download class="btn">
+        <i class="fas fa-download"></i> Download Single page Resume
     </a>
-    <a href="https://github.com/GTK-THANGELLA-17" class="social-link" target="_blank">
-      <i class="fab fa-github"></i>
+    <a href="Assests/pdf/G.THANGELLA--Resume.pdf" download class="btn btn-long-cv">
+        <i class="fas fa-download"></i> Download  CV
     </a>
-    <a href="https://instagram.com/g_thangella_k" class="social-link" target="_blank">
-      <i class="fab fa-instagram"></i>
-    </a>
-  </div>
+</div>
+
+
+        <div class="social-links">
+            <a href="https://linkedin.com/in/gthangella" class="social-link" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://github.com/GTK-THANGELLA-17" class="social-link" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://instagram.com/g_thangella_k" class="social-link" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </section>
+
+    <!-- Assistive Ball & Sidebar -->
+    <div class="assistive-ball" id="assistive-ball">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <div class="sidebar-options" id="sidebar-options">
+        <ul>
+            <li><a href="#about"><i class="fas fa-user"></i> About Me</a></li>
+            <li><a href="#technical-skills"><i class="fas fa-cogs"></i> Technical Skills</a></li>
+            <li><a href="#experience"><i class="fas fa-briefcase"></i> Experience</a></li>
+            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#prompt-engineering"><i class="fas fa-robot"></i> Prompt Engineering Projects</a></li>
+            <li><a href="#education"><i class="fas fa-graduation-cap"></i> Education</a></li>
+            <li><a href="#get-in-touch"><i class="fas fa-envelope"></i> Get in Touch</a></li>
+        </ul>
+    </div>
 </section>
 
 <!-- About Section -->
@@ -574,7 +727,7 @@ body {
 </section>
 
    <!-- Skills Section -->
-<section id="skills" class="section">
+<section id="technical-skills" class="section">
   <h2 class="section-title">Technical Skills</h2>
   <div class="skills-grid">
     <!-- Git -->
@@ -973,32 +1126,41 @@ body {
 </section>
 
 <div class="container">
+<section id="prompt-engineering" class="section">
     <div class="prompt-projects">
         <h2 class="section-title">Prompt Engineering Projects</h2>
         <div class="projects-grid">
             <div class="project-card">
                 <ul>
-				    <li><a href="https://gtk-thangella-17.github.io/GTK-AI-serverless-backendless/"><i class="fab fa-github"></i> GTK-AI Serverless Backendless</a></li>
-					<li><a href="https://gtk-thangella-17.github.io/GT-GROWTH-TRACK/"><i class="fab fa-github"></i> GT Growth Track</a></li>
+                    <!-- Top impressive projects first -->
+                    <li><a href="https://github.com/GTK-THANGELLA-17/cdp-support-chatbot"><i class="fab fa-github"></i> CDP Support Chatbot</a></li>
+                    <li><a href="https://gtk-thangella-17.github.io/spreadsheet-app/"><i class="fab fa-github"></i> Spreadsheet App</a></li>
+                    
+                    <!-- Key technical and user-facing projects -->
+                    <li><a href="https://gtk-thangella-17.github.io/GTK-AI-serverless-backendless/"><i class="fab fa-github"></i> GTK-AI Serverless Backendless</a></li>
+                    <li><a href="https://gtk-thangella-17.github.io/GTK-Payments-Gateway-Platform/"><i class="fab fa-github"></i> GTK Payments Gateway Platform</a></li>
+                    <li><a href="https://gtk-thangella-17.github.io/GT-GROWTH-TRACK/"><i class="fab fa-github"></i> GT Growth Track</a></li>
                     <li><a href="https://gtk-thangella-17.github.io/GT-GROWTH-TRACKS/"><i class="fab fa-github"></i> GT Growth Tracks</a></li>
-					<li><a href="https://gtk-thangella-17.github.io/GTK-Payments-Gateway-Platform/"><i class="fab fa-github"></i> GTK Payments Gateway Platform</a></li>
-                    <li><a href="https://gtk-thangella-17.github.io/Lifespan_calculatoe-v1/"><i class="fab fa-github"></i> Lifespan Calculator</a></li> 
-					<li><a href="https://gtk-thangella-17.github.io/Land-Rover-Range-Rover-Cars-Website/"><i class="fab fa-github"></i> Land Rover Range Rover Cars Website</a></li>
-					<li><a href="https://gtk-thangella-17.github.io/Renewit-Post-A-Product-webpage/"><i class="fab fa-github"></i> Renewit Post A Product Webpage</a></li>
+                    
+                    <!-- Strong Web Development Projects -->
+                    <li><a href="https://gtk-thangella-17.github.io/Lifespan_calculatoe-v1/"><i class="fab fa-github"></i> Lifespan Calculator</a></li>
+                    <li><a href="https://gtk-thangella-17.github.io/Land-Rover-Range-Rover-Cars-Website/"><i class="fab fa-github"></i> Land Rover Range Rover Cars Website</a></li>
+                    <li><a href="https://gtk-thangella-17.github.io/Renewit-Post-A-Product-webpage/"><i class="fab fa-github"></i> Renewit Post A Product Webpage</a></li>
                     <li><a href="https://gtk-thangella-17.github.io/Renewit-products-webpage/"><i class="fab fa-github"></i> Renewit Products Webpage</a></li>
                     <li><a href="https://gtk-thangella-17.github.io/StoreRoom-post-Product-Website/"><i class="fab fa-github"></i> StoreRoom Post Product Webpage</a></li>
                     <li><a href="https://gtk-thangella-17.github.io/StoreRoom-Products-Website/"><i class="fab fa-github"></i> StoreRoom Browse Product Webpage</a></li>
-					<li><a href="https://gtk-thangella-17.github.io/code-merger-and-divider-v1/"><i class="fab fa-github"></i> Code Merger and Divider</a></li>
+                    
+                    <!-- Additional small but useful tools -->
+                    <li><a href="https://gtk-thangella-17.github.io/code-merger-and-divider-v1/"><i class="fab fa-github"></i> Code Merger and Divider</a></li>
                     <li><a href="https://gtk-thangella-17.github.io/deals-and-tech-news-content-code-generator-v1/"><i class="fab fa-github"></i> Deals and Tech News Content Generator</a></li>
                     <li><a href="https://gtk-thangella-17.github.io/Wish-Generator-website/"><i class="fab fa-github"></i> Wish Generator Website</a></li>
-                    <li><a href="https://gtk-thangella-17.github.io/Resume-CV-Generator/"><i class="fab fa-github"></i> Resume CV Generator Website</a></li>
-                    <li><a href="https://gtk-thangella-17.github.io/code-generator-v1/"><i class="fab fa-github"></i> Code Generator</a></li>   
-                      
+                    <li><a href="https://gtk-thangella-17.github.io/Resume-CV-Generator/"><i class="fab fa-github"></i> Resume CV Generator Website</a></li>  
                 </ul>
             </div>
         </div>
     </div>
 </div>
+
 
 <section id="education" class="section animated">
     <div class="container">
@@ -1072,7 +1234,31 @@ body {
             });
         });
     });
+const assistiveBall = document.getElementById('assistive-ball');
+        const sidebarOptions = document.getElementById('sidebar-options');
 
+        assistiveBall.addEventListener('click', () => {
+            sidebarOptions.style.display = sidebarOptions.style.display === 'block' ? 'none' : 'block';
+        });
+		
+		// Get the button and the root element
+  const toggleBtn = document.querySelector('.toggle-btn');
+  const root = document.documentElement;
+
+  // Check for the user's preferred theme in localStorage (or use default)
+  const currentTheme = localStorage.getItem('theme') || 'dark';
+  root.setAttribute('data-theme', currentTheme);
+
+  // Toggle dark/light mode
+  toggleBtn.addEventListener('click', () => {
+    const newTheme = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    root.setAttribute('data-theme', newTheme);
+    
+    // Save the selected theme in localStorage
+    localStorage.setItem('theme', newTheme);
+  });
+  
+  
     document.addEventListener("DOMContentLoaded", function() {
         const form = document.querySelector('.contact-form');
         form.addEventListener('submit', function(event) {
