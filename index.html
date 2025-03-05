@@ -31,6 +31,17 @@
   --button-active: #d84141;
 }
 
+[data-theme='dark'] {
+  --primary: #00f7ff;
+  --secondary: #0a0a0f;
+  --accent: #ff4d5a;
+  --text: #ffffff;  /* Light text for better contrast on black */
+  --background: #000000; /* Pure black background for dark mode */
+  --button-background: #007bff;
+  --button-hover: #0056b3;
+  --button-active: #004085;
+}
+
 /* Global Resets */
 * {
   margin: 0;
@@ -46,6 +57,7 @@ body {
   line-height: 1.6;
   transition: background 0.3s ease, color 0.3s ease;
 }
+
 
 /* Profile Animation */
 .profile-container {
