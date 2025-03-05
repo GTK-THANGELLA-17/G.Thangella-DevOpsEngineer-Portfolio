@@ -587,9 +587,9 @@ body {
 
 /* Toggle Dark Mode Button */
 .toggle-btn {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  position: absolute;  /* Change to absolute to make it stay only in the top part */
+  top: 20px;           /* Distance from the top */
+  right: 20px;         /* Distance from the right side */
   padding: 10px 20px;
   background-color: var(--button-background);
   color: #fff;
@@ -600,11 +600,13 @@ body {
   font-size: 1rem;
 }
 
+/* Hover effect */
 .toggle-btn:hover {
   background-color: var(--button-hover);
   transform: translateY(-2px);
 }
 
+/* Active effect */
 .toggle-btn:active {
   background-color: var(--button-active);
   transform: translateY(0);
@@ -633,13 +635,13 @@ body {
     font-size: 14px;
   }
 
-
-@media (max-width: 768px) {
+  /* Adjust the call-to-action button layout for smaller screens */
   .cta-container {
     flex-direction: column;  /* Stack the buttons vertically */
     gap: 15px;  /* Adjust the gap for a better layout on small screens */
   }
 }
+
 
 </style>
 
@@ -1060,7 +1062,7 @@ body {
 
 
 
-    <!-- Experience Section -->
+   <!-- Experience Section -->
 <section id="experience" class="section">
     <h2 class="section-title">Experience</h2>
     <div class="timeline">
@@ -1068,13 +1070,28 @@ body {
             <h3>DevOps Engineer</h3>
             <p class="timeline-date">2023 - Present</p>
             <ul>
-                <li>Gained hands-on experience with CI/CD pipelines using tools like Jenkins, Git, Maven, and Terraform.</li>
-                <li>Configured and deployed cloud infrastructure on AWS using Terraform for infrastructure as code.</li>
-                <li>Set up Jenkins nodes and integrated them into a CI/CD pipeline for automated deployment.</li>
-                <li>Managed artifact uploads to Nexus for version control and used Prometheus & Grafana for monitoring systems.</li>
-                <li>Developed web applications and deployed them on Tomcat servers in a highly efficient environment.</li>
-                <li>Improved the deployment process, streamlining operations and ensuring smooth integration of automated tools.</li>
+                <li>Gained hands-on experience with CI/CD pipelines using Jenkins, Git, Maven, and Terraform.</li>
+                <li>Configured cloud infrastructure on AWS with Terraform, ensuring smooth automated deployments.</li>
+                <li>Streamlined deployment processes, integrating Jenkins and managing system monitoring with Prometheus & Grafana.</li>
+                <li>Developed and deployed web applications on Tomcat, enhancing efficiency in high-demand environments.</li>
+                <li>Improved automated deployment operations, boosting the overall workflow efficiency.</li>
             </ul>
+        </div>
+    </div>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <h3>Fresher - Web Development Projects</h3>
+            <p class="timeline-date">2025 (Projects)</p>
+            <ul>
+                <li>As a fresher, I focused on developing practical web applications to enhance my skills. I worked on projects like the Google Sheets Clone and a CDP Support Chatbot, which helped me gain hands-on experience in web development.</li>
+                <li>Developed a Google Sheets clone with real-time formula evaluation, dynamic grid generation, and data visualization, applying HTML5, CSS3, JavaScript, and libraries like Bootstrap, Chart.js, and SheetJS.</li>
+                <li>Built a support chatbot application with Flask and Bootstrap that integrates speech recognition, dynamic error handling, and dark/light mode features.</li>
+                <li>Contributed to the development of user-friendly web applications, ensuring a seamless and responsive experience.</li>
+            </ul>
+            <p><a href="https://gtk-thangella-17.github.io/spreadsheet-app/" target="_blank">Check out the Google Sheets Clone</a></p>
+            <p><a href="https://github.com/GTK-THANGELLA-17/spreadsheet-app" target="_blank">GitHub Repository (Google Sheets Clone)</a></p>
+            <p><a href="https://github.com/GTK-THANGELLA-17/cdp-support-chatbot" target="_blank">GitHub Repository (CDP Support Chatbot)</a></p>
         </div>
     </div>
 </section>
